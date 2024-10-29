@@ -3,6 +3,10 @@ import { BrowserRouter , Route, Routes, Link } from 'react-router-dom';
 import { AppBar, Button, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 import About from './containers/About/About.tsx'
+import Services from './containers/Services/Services.tsx';
+import Contacts from './containers/Contacts/Contacts.tsx';
+import Gallery from './containers/Gallery/Gallery.tsx';
+import Team from './containers/Team/Team.tsx';
 
 
 const App: React.FC = () => {
@@ -33,6 +37,10 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/pages/:pageName" element={<Page />} />
         <Route path="/pages/about" element={<About />} />
+        <Route path="/pages/services" element={<Services />} />
+        <Route path="/pages/contacts" element={<Contacts />} />
+        <Route path="/pages/gallery" element={<Gallery />} />
+        <Route path="/pages/team" element={<Team />} />
       </Routes>
     </BrowserRouter>
   );
