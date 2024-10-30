@@ -36,7 +36,6 @@ const Page: React.FC = () => {
         setLoading(false);
       }
     };
-
     fetchData();
   }, [pageName]);
 

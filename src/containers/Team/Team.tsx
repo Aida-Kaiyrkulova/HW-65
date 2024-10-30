@@ -1,37 +1,45 @@
 import React from "react";
-import { Container, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  List,
+  ListItem,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 
 const Team: React.FC = () => {
   return (
-    <Container>
+    <Container sx={{ paddingY: 4 }}>
       <Typography variant="h4" gutterBottom>
         Meet Our Team
       </Typography>
-      <Typography>
+      <Typography gutterBottom>
         At Sparkle Cleaners, our team is our greatest asset. We are a group of
         skilled professionals who are passionate about cleaning.
       </Typography>
-      <div>
+      <Box sx={{ marginBottom: 4 }}>
         <img
           src="https://media.istockphoto.com/id/1340226712/photo/successful-team.webp?s=2048x2048&w=is&k=20&c=oc_cfysAIXi-OmxGOn-Z1CoRNVd-ZPI2OVkbyuRBmFY="
           alt="Our Team"
           style={{ width: "100%", borderRadius: "8px" }}
         />
-      </div>
-      <ul>
-        <li>
-          <strong>John Doe</strong> - Founder & Head Cleaner
-        </li>
-        <li>
-          <strong>Jane Smith</strong> - Residential Cleaning Specialist
-        </li>
-        <li>
-          <strong>Mike Johnson</strong> - Commercial Cleaning Expert
-        </li>
-        <li>
-          <strong>Sarah Brown</strong> - Customer Relations Manager
-        </li>
-      </ul>
+      </Box>
+      <List>
+        {[
+          { name: "John Doe", role: "Founder & Head Cleaner" },
+          { name: "Jane Smith", role: "Residential Cleaning Specialist" },
+          { name: "Mike Johnson", role: "Commercial Cleaning Expert" },
+          { name: "Sarah Brown", role: "Customer Relations Manager" },
+        ].map((member, index) => (
+          <ListItem key={index} sx={{ marginBottom: "10px" }}>
+            <ListItemText
+              primary={<strong>{member.name}</strong>}
+              secondary={member.role}
+            />
+          </ListItem>
+        ))}
+      </List>
     </Container>
   );
 };

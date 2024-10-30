@@ -26,10 +26,9 @@ const Admin: React.FC = () => {
           setContent(response.data.content);
         }
       } catch (error) {
-        console.error("Error fetching page data:", error);
+        console.error("Error", error);
       }
     };
-
     fetchPageData();
   }, [pageName]);
 
@@ -38,7 +37,7 @@ const Admin: React.FC = () => {
       await axiosApi.put(`/pages/${pageName}.json`, { title, content });
       navigate(`/pages/${pageName}`);
     } catch (error) {
-      console.error("Error updating page data:", error);
+      console.error("Error", error);
     }
   };
 
