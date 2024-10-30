@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/axiosApi.ts","./src/main.tsx","./src/vite-env.d.ts","./src/components/Admin/Admin.tsx","./src/components/Page/Page.tsx","./src/containers/About/About.tsx","./src/containers/Contacts/Contacts.tsx","./src/containers/Gallery/Gallery.tsx","./src/containers/Services/Services.tsx","./src/containers/Team/Team.tsx"],"version":"5.6.3"}

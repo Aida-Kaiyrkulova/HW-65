@@ -31,7 +31,7 @@ const Page: React.FC = () => {
           setPageData(null);
         }
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       } finally {
         setLoading(false);
       }
@@ -46,7 +46,9 @@ const Page: React.FC = () => {
 
   return (
     <Container>
-      <Typography variant="h4" gutterBottom>{pageData.title}</Typography>
+      <Typography variant="h4" gutterBottom>
+        {pageData.title}
+      </Typography>
       <Typography>{pageData.content}</Typography>
     </Container>
   );
